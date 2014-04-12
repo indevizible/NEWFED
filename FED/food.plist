@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>ซาลาเปาไส้หมู 1 ลูก</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>มาม่าต้ม 1 ชาม</string>
+		<key>energy</key>
+		<integer>260</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ไข่ลูกเขย 1 ฟอง</string>
+		<key>energy</key>
+		<integer>160</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ไก่ทอด 1 อก</string>
+		<key>energy</key>
+		<integer>155</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>แกงเขียวหวาน 1 จาน</string>
+		<key>energy</key>
+		<integer>483</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กระทงทอง 3 ชิ้น</string>
+		<key>energy</key>
+		<integer>215</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กระเพาะปลา 1 จาน/ถ้วย</string>
+		<key>energy</key>
+		<integer>250</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวหมูน้ำ 1 ชาม</string>
+		<key>energy</key>
+		<integer>276</integer>
+	</dict>
+</array>
+</plist>
