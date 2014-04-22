@@ -21,7 +21,7 @@
 
 -(void)setContentSize:(CGSize)contentSize
 {
-    if (!CGSizeEqualToSize(CGSizeZero, contentSize)) {
+    if (!contentSize.height == 0.0f) {
         [super setContentSize:contentSize];
     }
 }

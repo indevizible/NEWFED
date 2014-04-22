@@ -24,7 +24,9 @@
 @property (nonatomic,strong) NSOperationQueue *queue;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (nonatomic,strong) NSMutableArray *filterdDataSource;
-
+@property (nonatomic,assign) float currentEnergy;
+@property (weak, nonatomic) IBOutlet UIImageView *progressImage;
+@property (nonatomic,weak) IBOutlet NSLayoutConstraint *progressRightSpace;
 @end
 
 static NSString *kFEDUserKey = @"FED_USER_KEY";
@@ -35,25 +37,31 @@ static NSString *kFEDDataFileName = @"FED.DAT";
 {
     [super viewDidAppear:animated];
     NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kFEDUserKey];
+    NSLog(@"data : %@",data);
     if (data)
     _user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    if (!_user) {
-        [self performSegueWithIdentifier:@"editUser" sender:_editUserButton];
-    }
+    
     
     NSLog(@"MBR : %f",_user.MBR);
     
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"FED_SAVE" object:nil queue:self.queue usingBlock:^(NSNotification *note) {
-        [self save];
-    }];
-    
-    [self displayInterface];
+    if (!_user) {
+        [self performSegueWithIdentifier:@"editUser" sender:_editUserButton];
+    }else{
+        [self displayInterface];
+        [[NSNotificationCenter defaultCenter] addObserverForName:@"FED_SAVE" object:nil queue:self.queue usingBlock:^(NSNotification *note) {
+            [self save];
+        }];
+    }
 }
 
 -(void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [self save];
+    if (_user)
+    {
+        [self save];
+    }
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"FED_SAVE" object:nil];
 }
 
@@ -69,17 +77,25 @@ static NSString *kFEDDataFileName = @"FED.DAT";
 }
 
 - (void)displayInterface{
-    [_energyDisplayLabel setText:[NSString stringWithFormat:@"%.2f K",  _user.MBR - [self summaryCalories]]];
+    self.currentEnergy=  _user.MBR - [self summaryCalories];
+    
+    [_energyDisplayLabel setText:[NSString stringWithFormat:@"%.2f K", self.currentEnergy]];
     NSLog(@"%f - %f = %f",self.user.MBR , [self summaryCalories] , self.user.MBR - [self summaryCalories]);
-    _progressView.progress =  ([self summaryCalories]/ _user.MBR );
-    if (_progressView.progress < .20) {
-        _progressView.progressTintColor = [UIColor greenColor];
-    }else if (_progressView.progress < .50){
-        _progressView.progressTintColor = [UIColor yellowColor];
-    }else{
-        _progressView.progressTintColor = [UIColor redColor];
-    }
-
+    [_energyDisplayLabel setTextColor:self.currentEnergy >= 0 ? [UIColor colorWithRed:0 green:0.6 blue:.2 alpha:1.0]:[UIColor redColor]];
+    
+    CGFloat progressWidth = 207.0f;
+    CGFloat rightDefaultSpace = 3.0f;
+    CGFloat aspectWidth = progressWidth * ([self summaryCalories]/ _user.MBR );
+    CGFloat rightSpace = (progressWidth - aspectWidth) + rightDefaultSpace;
+    
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                            self.progressRightSpace.constant = rightSpace;
+                            [self.view layoutIfNeeded];
+                        } completion:^(BOOL finished) {
+                        }];
 }
 
 - (void)viewDidLoad
@@ -107,9 +123,8 @@ static NSString *kFEDDataFileName = @"FED.DAT";
         [dateFormatter setDateStyle:NSDateFormatterShortStyle];
         if (![[dateFormatter stringFromDate:[NSDate new]] isEqualToString:[dateFormatter stringFromDate:date]]) {
             NSMutableArray *tmp  = [NSKeyedUnarchiver unarchiveObjectWithFile:dataSourcePath];
-            for (NSData *data in tmp)
+            for (FoodHelper *food in tmp)
             {
-                FoodHelper *food = [NSKeyedUnarchiver unarchiveObjectWithData:data];
                 [food reset];
             }
             [NSKeyedArchiver archiveRootObject:tmp toFile:dataSourcePath];
@@ -120,9 +135,11 @@ static NSString *kFEDDataFileName = @"FED.DAT";
         return [obj1.name caseInsensitiveCompare:obj2.name];
     }];
     
-    [self.queue addOperationWithBlock:^{
-        [self save];
-    }];
+    if (_user) {
+        [self.queue addOperationWithBlock:^{
+            [self save];
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -150,12 +167,14 @@ static NSString *kFEDDataFileName = @"FED.DAT";
        cell =  [self.tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
     }
     
-    
     if (tableView == self.tableView) {
         cell.food = self.dataSource[indexPath.row];
     }else{
         cell.food = self.filterdDataSource[indexPath.row];
     }
+    
+    [cell setBackgroundColor:cell.food.quantity == 0 ? [UIColor colorWithRed:234.f/255.f green:1.0f blue:243.f/255.f alpha:1.0f]:[UIColor colorWithRed:136.f/255.f green:253.f/255.f blue:202.f/255.f alpha:1.0f]];
+    
     return cell;
 }
 
@@ -232,6 +251,20 @@ static NSString *kFEDDataFileName = @"FED.DAT";
         }
     }
     [self.tableView reloadData];
+}
+
+- (IBAction)valChanged:(id)sender
+{
+    FoodListCell *cell = (FoodListCell *)sender;
+    do {
+        cell = (FoodListCell *)cell.superview;
+    } while (![cell isKindOfClass:[FoodListCell class]] || cell == nil);
+    
+    if (cell) {
+        UITableView *tableView = self.searchDisplayController.isActive ? self.searchDisplayController.searchResultsTableView : self.tableView ;
+        NSIndexPath *indexPath = [tableView indexPathForCell:cell];
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 -(float)summaryCalories

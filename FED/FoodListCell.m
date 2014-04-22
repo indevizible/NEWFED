@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
 @end
-
+static NSString *kCurrentEnergy = @"FED_ENGY_KEY";
 @implementation FoodListCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -42,6 +42,7 @@
     self.food.quantity = (NSUInteger)sender.value;
     [_quantityLabel setText:[NSString stringWithFormat:@"%.0f",sender.value]];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"FED_SAVE" object:nil];
+
 }
 
 -(void)layoutSubviews

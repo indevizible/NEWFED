@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
 @property (weak, nonatomic) IBOutlet UITextField *heightTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *excFreqSegmentedController;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 
 - (IBAction)tappedGender:(UIButton *)sender;
 
@@ -41,6 +42,7 @@ static NSString *kFEDUserKey = @"FED_USER_KEY";
     if (data)
        storedUser =  [NSKeyedUnarchiver unarchiveObjectWithData:data] ;
     self.user = storedUser ? storedUser : [User new];
+    self.backgroundView.frame = self.scrollView.frame;
 }
 
 
@@ -99,6 +101,8 @@ static NSString *kFEDUserKey = @"FED_USER_KEY";
     CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
 	UIViewAnimationCurve curve = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
 	double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    self.scrollView.contentSize = self.view.frame.size;
+    
     [self.view layoutIfNeeded];
     [UIView animateWithDuration:duration
                           delay:0.0
@@ -107,6 +111,7 @@ static NSString *kFEDUserKey = @"FED_USER_KEY";
                          CGFloat keyboardY = [self.view convertRect:keyboardRect fromView:nil].origin.y;
 
                              self.bottomScrollViewConstrant.constant = self.view.frame.size.height - keyboardY;
+                         NSLog(@"%f",_bottomScrollViewConstrant.constant);
                          
                          [self.view layoutIfNeeded];
                      }

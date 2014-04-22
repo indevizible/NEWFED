@@ -4,51 +4,723 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>ซาลาเปาไส้หมู 1 ลูก</string>
+		<string>ยากิโซบะ 1 จาน                              400 Kcal</string>
 		<key>energy</key>
-		<integer>120</integer>
+		<integer>400</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>มาม่าต้ม 1 ชาม</string>
+		<string>บัวลอย 1 ถ้วย                                 223 Kcal</string>
 		<key>energy</key>
-		<integer>260</integer>
+		<integer>223</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>ไข่ลูกเขย 1 ฟอง</string>
-		<key>energy</key>
-		<integer>160</integer>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>ไก่ทอด 1 อก</string>
+		<string>ปลากระพงนึ่งมะนาว 1 ชิ้นกลาง           155 Kcal</string>
 		<key>energy</key>
 		<integer>155</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>แกงเขียวหวาน 1 จาน</string>
+		<string>ปลาชุบขนมปังทอด สลัดผัก 1 จาน       595 Kcal</string>
 		<key>energy</key>
-		<integer>483</integer>
+		<integer>595</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>กระทงทอง 3 ชิ้น</string>
+		<string>ปลาทอดสามรส 1 ตัวกลาง                 470 Kcal</string>
 		<key>energy</key>
-		<integer>215</integer>
+		<integer>470</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>กระเพาะปลา 1 จาน/ถ้วย</string>
+		<string>ปลาทูทอด 1 ตัวกลาง                        280 Kcal</string>
+		<key>energy</key>
+		<integer>280</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ปลาราดพริก 1 จาน                           300 Kcal</string>
+		<key>energy</key>
+		<integer>300</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ปาท่องโก๋ 1 คู่กลาง                           270 Kcal</string>
+		<key>energy</key>
+		<integer>270</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ผัดผักรวมกับหมู 1 จาน                      210 Kcal</string>
+		<key>energy</key>
+		<integer>210</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ผัดฟักทองใส่ไข่ 1 จาน                       255 Kcal</string>
+		<key>energy</key>
+		<integer>255</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ผัดเผ็ดปลาดุก 1 ถ้วย                         200 Kcal</string>
+		<key>energy</key>
+		<integer>200</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ฝรั่ง 1 ผล                                        120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ฝอยทอง 1 แพ                                  145 Kcal</string>
+		<key>energy</key>
+		<integer>145</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>พะแนงไก่ 1 ถ้วย                               230 Kcal</string>
+		<key>energy</key>
+		<integer>230</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>พายกรอบ (โรยน้ำตาล) 1 ชิ้น               120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>พายสับปะรด 1 ชิ้น                            505 Kcal</string>
+		<key>energy</key>
+		<integer>505</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>พิซซ่าฮาวายเอี้ยน 1 ชิ้น                      345 Kcal</string>
+		<key>energy</key>
+		<integer>345</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ฟรุตสลัด 1 ถ้วย                               180 Kcal</string>
+		<key>energy</key>
+		<integer>180</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>มะม่วงเขียวเสวย 1 ผล                       120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>มันฝรั่งแผ่นทอด (Chip) 1 ชิ้น              15 Kcal</string>
+		<key>energy</key>
+		<integer>15</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กระเพาะปลา 1 ชาม   150 Kcal</string>
+		<key>energy</key>
+		<integer>150</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กล้วยน้ำว้า 1 ผล        60 Kcal</string>
+		<key>energy</key>
+		<integer>60</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กล้วยบวชชี 1 ถ้วย      230 Kcal</string>
+		<key>energy</key>
+		<integer>230</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กล้วยปิ้งชุบกะทิ 1 ผล  145 Kcal</string>
+		<key>energy</key>
+		<integer>145</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กล้วยหอม 1 ผล         120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กะหรี่พัฟ 1 ชิ้น           190 Kcal</string>
+		<key>energy</key>
+		<integer>190</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กาแฟร้อน 1 แก้ว        55 Kcal</string>
+		<key>energy</key>
+		<integer>55</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กาแฟเย็น 1 แก้ว        115 Kcal</string>
+		<key>energy</key>
+		<integer>115</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กุนเชียงทอด 1 คู่เล็ก    240 Kcal</string>
+		<key>energy</key>
+		<integer>240</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กุ่ยช่ายนึ่ง 1 อัน          140 Kcal</string>
+		<key>energy</key>
+		<integer>140</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กุ้งทอดกระเทียมพริกไทย 1 ตัวกลาง 85 Kcal</string>
+		<key>energy</key>
+		<integer>85</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กุ้งผัดพริกอ่อน 1 จาน    235 Kcal</string>
+		<key>energy</key>
+		<integer>235</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>กุ้งอบวุ้นเส้น 1 จาน       300 Kcal</string>
+		<key>energy</key>
+		<integer>300</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยจั๊บ 1 ชาม              240 Kcal</string>
+		<key>energy</key>
+		<integer>240</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวคั่วไก่ 1 จาน    435 Kcal</string>
+		<key>energy</key>
+		<integer>435</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวต้มยำกุ้ง 1 ถ้วย 320 Kcal</string>
+		<key>energy</key>
+		<integer>320</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวผัดไทยกุ้งสดใส่ไข่ 1 จาน 545 Kcal</string>
+		<key>energy</key>
+		<integer>545</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวหลอด 1 จาน    225 Kcal</string>
+		<key>energy</key>
+		<integer>225</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวเรือน้ำตก 1 ถ้วย  180 Kcal</string>
+		<key>energy</key>
+		<integer>180</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวเส้นปลา 1 ชาม  375 Kcal</string>
+		<key>energy</key>
+		<integer>375</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ก๋วยเตี๋ยวเส้นเล็กต้มยำหมู 1 ชาม  335 Kcal</string>
+		<key>energy</key>
+		<integer>335</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ขนมครก 1 คู่                 105 Kcal</string>
+		<key>energy</key>
+		<integer>105</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ขนมจีน 1 ทัพพี               80 Kcal</string>
+		<key>energy</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ขนมจีบ 1 ลูก                  40 Kcal</string>
+		<key>energy</key>
+		<integer>40</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ขนมปังปอนด์ 1 แผ่น         80 Kcal</string>
+		<key>energy</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ขนุน 1 ยวง                     30 Kcal</string>
+		<key>energy</key>
+		<integer>30</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวขาหมู 1 จาน               690 Kcal</string>
+		<key>energy</key>
+		<integer>690</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวคลุกกะปิ 1 จาน           410 Kcal</string>
+		<key>energy</key>
+		<integer>410</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวต้ม 1 ถ้วย                  120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้ามต้มมัด 1 มัด               285 Kcal</string>
+		<key>energy</key>
+		<integer>285</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดกระเพราหมู 1 จาน    580 Kcal</string>
+		<key>energy</key>
+		<integer>580</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดกระเพรากุ้ง 1 จาน     540 Kcal</string>
+		<key>energy</key>
+		<integer>540</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดกระเพราไก่ไข่ดาว 1 จาน  630 Kcal</string>
+		<key>energy</key>
+		<integer>630</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดกุ้งใส่ไข่ 1 จาน         595 Kcal</string>
+		<key>energy</key>
+		<integer>595</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดคะน้าหมูกรอบ 1 จาน 670 Kcal</string>
+		<key>energy</key>
+		<integer>670</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดน้ำพริกกุ้งสด 1 จาน   460 Kcal</string>
+		<key>energy</key>
+		<integer>460</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดปลาหมึกน้ำพริกเผา 1 จาน 535 Kcal</string>
+		<key>energy</key>
+		<integer>535</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดปลาเค็ม 1 จาน         405 Kcal</string>
+		<key>energy</key>
+		<integer>405</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดปูใส่ไข่ 1 จาน           610 Kcal</string>
+		<key>energy</key>
+		<integer>610</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดผักกระเฉดหมูกรอบ 1 จาน  600 Kcal</string>
+		<key>energy</key>
+		<integer>600</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวผัดอเมริกัน 1 จาน         790 Kcal</string>
+		<key>energy</key>
+		<integer>790</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวมันไก่ 1 จาน                585 Kcal</string>
+		<key>energy</key>
+		<integer>585</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวมันไก่ทอด 1 จาน          695 Kcal</string>
+		<key>energy</key>
+		<integer>695</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวหน้าไก่ 1 จาน              400 Kcal</string>
+		<key>energy</key>
+		<integer>400</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวสวย(ข้าวขาว) 1 ทัพพี    80 Kcal</string>
+		<key>energy</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวหน้าเป็ด 1 จาน            495 Kcal</string>
+		<key>energy</key>
+		<integer>495</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวหมกไก่ 1 จาน             540 Kcal</string>
+		<key>energy</key>
+		<integer>540</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวหมูกระเทียม 1 จาน      525 Kcal</string>
+		<key>energy</key>
+		<integer>525</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวหมูแดง 1 จาน             560 Kcal</string>
+		<key>energy</key>
+		<integer>560</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวเหนียวนึ่ง 1 ทัพพี         80 Kcal</string>
+		<key>energy</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวเหนียวสังขยา 1 ห่อ      370 Kcal</string>
+		<key>energy</key>
+		<integer>370</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวโพดคลุก 1 จานเล็ก      160 Kcal</string>
+		<key>energy</key>
+		<integer>160</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวโพดคั่ว (เคลือบน้ำตาล) 1 ถ้วย 60 Kcal</string>
+		<key>energy</key>
+		<integer>60</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวโพดต้ม 1 ฝักเล็ก          200 Kcal</string>
+		<key>energy</key>
+		<integer>200</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ข้าวไข่เจียว 1 จาน              445 Kcal</string>
+		<key>energy</key>
+		<integer>445</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>คอหมูย่าง 1 จาน                200 Kcal</string>
+		<key>energy</key>
+		<integer>200</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>คัสตาร์ดน้ำตาลไหม้ 1 ชิ้น      230 Kcal</string>
+		<key>energy</key>
+		<integer>230</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>คุ้กกี้เนย 1 ชิ้น                     105 Kcal</string>
+		<key>energy</key>
+		<integer>105</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชมพู่ 1 ผล                          30 Kcal</string>
+		<key>energy</key>
+		<integer>30</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชาดำเย็น 1 แก้ว                   110 Kcal</string>
+		<key>energy</key>
+		<integer>110</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชามะนาว 1 แก้ว                   100 Kcal</string>
+		<key>energy</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชาร้อน 1 แก้ว                       55 Kcal</string>
+		<key>energy</key>
+		<integer>55</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชาเขียว (รสหวาน) 1 แก้ว         120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ชาเย็น 1 แก้ว                        100 Kcal</string>
+		<key>energy</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ช็อคโกแลต 1 ชิ้นพอคำ            170 Kcal</string>
+		<key>energy</key>
+		<integer>170</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ช็อคโกแลต 1 แก้ว                  120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ซาลาเปาไส้หมู 1 ลูก                120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ซุปใส (ผัก) 1 ถ้วย                   15 Kcal</string>
+		<key>energy</key>
+		<integer>15</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ตับไก่ปิ้ง 1 ไม้                         60 Kcal</string>
+		<key>energy</key>
+		<integer>60</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ต้มยำกุ้ง 1 ถ้วย                       65 Kcal</string>
+		<key>energy</key>
+		<integer>65</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ถั่วลิสงต้ม 1 ช้อนโต๊                 45 Kcal</string>
+		<key>energy</key>
+		<integer>45</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ทับทิมกรอบ 1 ถ้วย                  250 Kcal</string>
 		<key>energy</key>
 		<integer>250</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>ก๋วยเตี๋ยวหมูน้ำ 1 ชาม</string>
+		<string>ทุเรียนชะนี 100 กรัม               165 Kcal</string>
 		<key>energy</key>
-		<integer>276</integer>
+		<integer>165</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ท๊อฟฟี่นม 1 เม็ด                     20 Kcal</string>
+		<key>energy</key>
+		<integer>20</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>นมจืด (250 cc) 1 กล่อง          160 Kcal</string>
+		<key>energy</key>
+		<integer>160</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>นมจืด (ไม่มีไขมัน) 1 กล่อง         80 Kcal</string>
+		<key>energy</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>นมถั่วเหลือง (หวานน้อย) 1 กล่อง 140 Kcal</string>
+		<key>energy</key>
+		<integer>140</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>นมเปรี้ยว UHT รสผลไม้ (200 cc) 1 กล่อง 125 Kcal</string>
+		<key>energy</key>
+		<integer>125</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>นมเย็น 1 แก้ว                          150 Kcal</string>
+		<key>energy</key>
+		<integer>150</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้อยหน่า 1 ผล                          120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำกระเจี๊ยบ 1 แก้ว                     120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำขิง (ขิงผงรสหวาน) 1 กล่อง        60 Kcal</string>
+		<key>energy</key>
+		<integer>60</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำจับเลี้ยง 1 แก้ว                       100 Kcal</string>
+		<key>energy</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำชาเขียว (250 ml) 1 กล่อง        70 Kcal</string>
+		<key>energy</key>
+		<integer>70</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำตาลทราย 1 ช้อนชา                 20 Kcal</string>
+		<key>energy</key>
+		<integer>20</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำผลไม้รวม 1 กล่อง                   100 Kcal</string>
+		<key>energy</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำพริกกะปิผักสด 2 ช้อนโต๊ะ          55 Kcal</string>
+		<key>energy</key>
+		<integer>55</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำมะนาว 1 แก้ว                         100 Kcal</string>
+		<key>energy</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำมะพร้าว 1 แก้ว                        120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำมะพร้าวผสมเนื้อ 1 กล่อง            150 Kcal</string>
+		<key>energy</key>
+		<integer>150</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำมะเขือเทศ100% 1 กล่อง            50 Kcal</string>
+		<key>energy</key>
+		<integer>50</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำส้ม 100% 1 กล่อง                    120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำองุ่นแดง 100% 1 กล่อง              120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำอัดลม (หวาน) 1 แก้ว                   75 Kcal</string>
+		<key>energy</key>
+		<integer>75</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำอัดลมประเภทโคล่า 1 กระป๋อง       130 Kcal</string>
+		<key>energy</key>
+		<integer>130</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำแอปเปิ้ลแดง 100% 1 กล่อง          120 Kcal</string>
+		<key>energy</key>
+		<integer>120</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>น้ำเต้าหู้(จืด) 1 แก้ว                         75 Kcal</string>
+		<key>energy</key>
+		<integer>75</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>บะจ่าง 1 ลูก                                   300 Kcal</string>
+		<key>energy</key>
+		<integer>300</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>บะหมี่กรอบราดหน้า รวมมิตร 1 จาน     690 Kcal</string>
+		<key>energy</key>
+		<integer>690</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>บะหมี่กึ่งสำเร็จรูปผัดขี้เมา 1 จาน          530 Kcal</string>
+		<key>energy</key>
+		<integer>530</integer>
 	</dict>
 </array>
 </plist>
