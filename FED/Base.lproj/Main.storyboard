@@ -127,9 +127,13 @@
                                             <constraint firstItem="qrL-NS-BwG" firstAttribute="leading" secondItem="G0O-NR-oMu" secondAttribute="leading" id="tDv-hO-QDH"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-K2-M9S">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-K2-M9S">
                                         <rect key="frame" x="132" y="215" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="3dr-7c-sC9"/>
+                                            <constraint firstAttribute="height" constant="56" id="61r-14-PI2"/>
+                                        </constraints>
                                         <state key="normal" backgroundImage="FED_Burger">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -137,10 +141,19 @@
                                             <action selector="didToggle:" destination="IqD-ca-V5F" eventType="touchUpInside" id="zi8-0J-1Xi"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FED_boxcal_text" translatesAutoresizingMaskIntoConstraints="NO" id="j5W-q3-KqK">
+                                        <rect key="frame" x="178" y="173" width="113" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="113" id="bDD-7O-MRF"/>
+                                            <constraint firstAttribute="height" constant="50" id="mB7-ge-RLK"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="G0O-NR-oMu" firstAttribute="top" secondItem="PAq-Wg-YaN" secondAttribute="top" constant="88" id="159-At-R86"/>
+                                    <constraint firstItem="BNV-Gl-IHq" firstAttribute="top" secondItem="j5W-q3-KqK" secondAttribute="top" constant="-24" id="3an-LR-Bsj"/>
                                     <constraint firstItem="BNV-Gl-IHq" firstAttribute="top" secondItem="G0O-NR-oMu" secondAttribute="bottom" constant="13" id="6rm-wc-Qed"/>
                                     <constraint firstItem="BNV-Gl-IHq" firstAttribute="leading" secondItem="c7h-X4-Y5U" secondAttribute="leading" constant="-21" id="8wf-yz-XuF"/>
                                     <constraint firstAttribute="bottom" secondItem="HCt-MC-vNr" secondAttribute="bottom" constant="8" id="FyN-om-SnX"/>
@@ -149,9 +162,12 @@
                                     <constraint firstAttribute="trailing" secondItem="HCt-MC-vNr" secondAttribute="trailing" constant="20" id="NP0-ke-7a5"/>
                                     <constraint firstAttribute="centerX" secondItem="G0O-NR-oMu" secondAttribute="centerX" id="QaF-WV-LgE"/>
                                     <constraint firstItem="N8E-uC-CMj" firstAttribute="top" secondItem="PAq-Wg-YaN" secondAttribute="top" constant="20" id="T3F-9y-rrg"/>
+                                    <constraint firstItem="j5W-q3-KqK" firstAttribute="leading" secondItem="BNV-Gl-IHq" secondAttribute="trailing" constant="-84" id="amM-Jg-Uto"/>
+                                    <constraint firstAttribute="centerX" secondItem="CfS-K2-M9S" secondAttribute="centerX" id="dzl-Vg-eKy"/>
                                     <constraint firstItem="BNV-Gl-IHq" firstAttribute="trailing" secondItem="c7h-X4-Y5U" secondAttribute="trailing" constant="21" id="ffL-yO-OkC"/>
                                     <constraint firstItem="Kbp-ba-tJw" firstAttribute="leading" secondItem="PAq-Wg-YaN" secondAttribute="leading" constant="11" id="jBn-XJ-dz6"/>
                                     <constraint firstAttribute="height" constant="278" id="rD5-zc-b5N"/>
+                                    <constraint firstAttribute="bottom" secondItem="CfS-K2-M9S" secondAttribute="bottom" constant="7" id="ta7-Vr-B51"/>
                                     <constraint firstAttribute="bottom" secondItem="Kbp-ba-tJw" secondAttribute="bottom" constant="8" id="vXS-HE-V7f"/>
                                     <constraint firstAttribute="centerX" secondItem="BNV-Gl-IHq" secondAttribute="centerX" constant="-12" id="vmN-W3-Ae0"/>
                                     <constraint firstItem="BNV-Gl-IHq" firstAttribute="bottom" secondItem="c7h-X4-Y5U" secondAttribute="bottom" constant="9" id="wNC-ya-t9x"/>
@@ -288,7 +304,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="292" y="739"/>
+            <point key="canvasLocation" x="307" y="705"/>
         </scene>
         <!--Foode Editor View Controller-->
         <scene sceneID="73R-7S-VhM">
@@ -624,6 +640,7 @@
         <image name="FED_bg2" width="320" height="480"/>
         <image name="FED_bg_Dic" width="320" height="480"/>
         <image name="FED_boxcal_box" width="221" height="83"/>
+        <image name="FED_boxcal_text" width="113" height="50"/>
         <image name="FED_buttonEDIT" width="176" height="42"/>
         <image name="FED_buttonTEXTplus" width="172" height="92"/>
         <image name="FED_buttonback" width="177" height="95"/>
