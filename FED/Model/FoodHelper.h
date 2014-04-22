@@ -9,6 +9,7 @@
 #import "Food.h"
 
 @interface FoodHelper : Food <NSCoding>
+@property (nonatomic,assign) BOOL nearFull,isFull;
 @property (nonatomic,assign) NSUInteger quantity;
 @property (nonatomic,readonly) float summaryCalories;
 - (void)reset;

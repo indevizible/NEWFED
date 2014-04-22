@@ -7,6 +7,8 @@
 //
 
 #import "FoodListCell.h"
+#import "User.h"
+#import <BlocksKit/UIAlertView+BlocksKit.h>
 
 @interface FoodListCell()
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
@@ -39,10 +41,25 @@ static NSString *kCurrentEnergy = @"FED_ENGY_KEY";
 }
 - (IBAction)changedStepperValue:(UIStepper *)sender
 {
-    self.food.quantity = (NSUInteger)sender.value;
-    [_quantityLabel setText:[NSString stringWithFormat:@"%.0f",sender.value]];
+    BOOL isInCreaseing = self.food.quantity < (NSInteger)self.stepper.value;
+    self.food.quantity = (NSUInteger)self.stepper.value;
+    [_quantityLabel setText:[NSString stringWithFormat:@"%.0f",self.stepper.value]];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"FED_SAVE" object:nil];
-
+    if (self.food.nearFull && sender && isInCreaseing)
+    {
+        UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:@"Alert!" message:@"ถ้าทานอาหารนี้ พลังงานจะเกิน"];
+        [alertView bk_addButtonWithTitle:@"กินต่อ" handler:^{
+        
+        }];
+        
+        [alertView bk_addButtonWithTitle:@"ไม่กินละ" handler:^{
+            _stepper.value -= 1;
+            [self changedStepperValue:nil];
+        }];
+        
+        [alertView show];
+    }
+    
 }
 
 -(void)layoutSubviews
@@ -50,7 +67,7 @@ static NSString *kCurrentEnergy = @"FED_ENGY_KEY";
     [super layoutSubviews];
     [_foodNameLabel setText:_food.name];
     _stepper.value = _food.quantity;
-    [self changedStepperValue:_stepper];
+    [self changedStepperValue:nil];
 }
 
 @end

@@ -57,16 +57,16 @@
                                             <segue destination="whU-zE-Vkq" kind="modal" identifier="editUser" id="HlD-cb-prY"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FED_boxcal" translatesAutoresizingMaskIntoConstraints="NO" id="BNV-Gl-IHq">
-                                        <rect key="frame" x="83" y="149" width="179" height="74"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FED_boxcal_box" translatesAutoresizingMaskIntoConstraints="NO" id="BNV-Gl-IHq">
+                                        <rect key="frame" x="83" y="149" width="179" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="74" id="Fqk-ZO-hdI"/>
+                                            <constraint firstAttribute="height" constant="59" id="Fqk-ZO-hdI"/>
                                             <constraint firstAttribute="width" constant="179" id="PgJ-xZ-uu4"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7h-X4-Y5U">
-                                        <rect key="frame" x="93" y="155" width="137" height="44"/>
+                                        <rect key="frame" x="104" y="155" width="137" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,32 +127,34 @@
                                             <constraint firstItem="qrL-NS-BwG" firstAttribute="leading" secondItem="G0O-NR-oMu" secondAttribute="leading" id="tDv-hO-QDH"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FED_Burger" translatesAutoresizingMaskIntoConstraints="NO" id="HYl-tl-Msf">
-                                        <rect key="frame" x="93" y="228" width="56" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-K2-M9S">
+                                        <rect key="frame" x="132" y="215" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FED_Dish" translatesAutoresizingMaskIntoConstraints="NO" id="Y04-jq-3TP">
-                                        <rect key="frame" x="175" y="223" width="55" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <state key="normal" backgroundImage="FED_Burger">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didToggle:" destination="IqD-ca-V5F" eventType="touchUpInside" id="zi8-0J-1Xi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="G0O-NR-oMu" firstAttribute="top" secondItem="PAq-Wg-YaN" secondAttribute="top" constant="88" id="159-At-R86"/>
                                     <constraint firstItem="BNV-Gl-IHq" firstAttribute="top" secondItem="G0O-NR-oMu" secondAttribute="bottom" constant="13" id="6rm-wc-Qed"/>
+                                    <constraint firstItem="BNV-Gl-IHq" firstAttribute="leading" secondItem="c7h-X4-Y5U" secondAttribute="leading" constant="-21" id="8wf-yz-XuF"/>
                                     <constraint firstAttribute="bottom" secondItem="HCt-MC-vNr" secondAttribute="bottom" constant="8" id="FyN-om-SnX"/>
                                     <constraint firstAttribute="trailing" secondItem="N8E-uC-CMj" secondAttribute="trailing" constant="11" id="HX8-lS-MkD"/>
-                                    <constraint firstItem="c7h-X4-Y5U" firstAttribute="leading" secondItem="BNV-Gl-IHq" secondAttribute="leading" constant="10" id="IqL-wL-o0O"/>
+                                    <constraint firstItem="BNV-Gl-IHq" firstAttribute="top" secondItem="c7h-X4-Y5U" secondAttribute="top" constant="-6" id="IUA-pM-U9z"/>
                                     <constraint firstAttribute="trailing" secondItem="HCt-MC-vNr" secondAttribute="trailing" constant="20" id="NP0-ke-7a5"/>
                                     <constraint firstAttribute="centerX" secondItem="G0O-NR-oMu" secondAttribute="centerX" id="QaF-WV-LgE"/>
                                     <constraint firstItem="N8E-uC-CMj" firstAttribute="top" secondItem="PAq-Wg-YaN" secondAttribute="top" constant="20" id="T3F-9y-rrg"/>
-                                    <constraint firstItem="c7h-X4-Y5U" firstAttribute="bottom" secondItem="BNV-Gl-IHq" secondAttribute="bottom" constant="-24" id="Y7X-gg-Mhp"/>
+                                    <constraint firstItem="BNV-Gl-IHq" firstAttribute="trailing" secondItem="c7h-X4-Y5U" secondAttribute="trailing" constant="21" id="ffL-yO-OkC"/>
                                     <constraint firstItem="Kbp-ba-tJw" firstAttribute="leading" secondItem="PAq-Wg-YaN" secondAttribute="leading" constant="11" id="jBn-XJ-dz6"/>
-                                    <constraint firstItem="c7h-X4-Y5U" firstAttribute="trailing" secondItem="BNV-Gl-IHq" secondAttribute="trailing" constant="-32" id="oYo-R5-aUJ"/>
                                     <constraint firstAttribute="height" constant="278" id="rD5-zc-b5N"/>
                                     <constraint firstAttribute="bottom" secondItem="Kbp-ba-tJw" secondAttribute="bottom" constant="8" id="vXS-HE-V7f"/>
                                     <constraint firstAttribute="centerX" secondItem="BNV-Gl-IHq" secondAttribute="centerX" constant="-12" id="vmN-W3-Ae0"/>
-                                    <constraint firstItem="c7h-X4-Y5U" firstAttribute="top" secondItem="BNV-Gl-IHq" secondAttribute="top" constant="6" id="wyY-Ye-2XX"/>
+                                    <constraint firstItem="BNV-Gl-IHq" firstAttribute="bottom" secondItem="c7h-X4-Y5U" secondAttribute="bottom" constant="9" id="wNC-ya-t9x"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vWp-xa-M0E">
@@ -255,6 +257,7 @@
                         <outlet property="progressRightSpace" destination="cjx-fV-ebA" id="mNO-35-ny4"/>
                         <outlet property="searchDisplayController" destination="h5Y-19-qS1" id="agW-jf-UI1"/>
                         <outlet property="tableView" destination="vWp-xa-M0E" id="pFK-eQ-Qrb"/>
+                        <outlet property="toggleButton" destination="CfS-K2-M9S" id="6pP-wK-MQr"/>
                         <outlet property="topMenuConstrant" destination="rD5-zc-b5N" id="k4x-NG-vjs"/>
                     </connections>
                 </viewController>
@@ -617,11 +620,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FED_Burger" width="200" height="188"/>
-        <image name="FED_Dish" width="200" height="188"/>
+        <image name="FED_Burger" width="56" height="56"/>
         <image name="FED_bg2" width="320" height="480"/>
         <image name="FED_bg_Dic" width="320" height="480"/>
-        <image name="FED_boxcal" width="179" height="74"/>
+        <image name="FED_boxcal_box" width="221" height="83"/>
         <image name="FED_buttonEDIT" width="176" height="42"/>
         <image name="FED_buttonTEXTplus" width="172" height="92"/>
         <image name="FED_buttonback" width="177" height="95"/>

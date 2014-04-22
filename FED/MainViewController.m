@@ -15,6 +15,10 @@
 #import "FoodeEditorViewController.h"
 
 @interface MainViewController () <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
+{
+    BOOL isEatMode;
+}
+@property (weak, nonatomic) IBOutlet UIButton *toggleButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMenuConstrant;
 @property (nonatomic,retain) User *user;
@@ -27,6 +31,7 @@
 @property (nonatomic,assign) float currentEnergy;
 @property (weak, nonatomic) IBOutlet UIImageView *progressImage;
 @property (nonatomic,weak) IBOutlet NSLayoutConstraint *progressRightSpace;
+@property (nonatomic,strong) NSMutableArray *ateFood;
 @end
 
 static NSString *kFEDUserKey = @"FED_USER_KEY";
@@ -52,6 +57,7 @@ static NSString *kFEDDataFileName = @"FED.DAT";
             [self save];
         }];
     }
+    [self.tableView reloadData];
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -102,6 +108,7 @@ static NSString *kFEDDataFileName = @"FED.DAT";
 {
     [super viewDidLoad];
     self.queue = [NSOperationQueue new];
+    self.ateFood = [NSMutableArray new];
     NSString *dataSourcePath = [[[NSFileManager defaultManager] privateDataPath] stringByAppendingPathComponent:kFEDDataFileName];
     NSLog(@"%@",dataSourcePath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataSourcePath])
@@ -153,9 +160,9 @@ static NSString *kFEDDataFileName = @"FED.DAT";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
      if (tableView == self.tableView) {
-         return _dataSource.count;
+         return isEatMode ? self.ateFood.count :  _dataSource.count;
      }
-    return self.filterdDataSource.count;
+    return  self.filterdDataSource.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -168,12 +175,17 @@ static NSString *kFEDDataFileName = @"FED.DAT";
     }
     
     if (tableView == self.tableView) {
-        cell.food = self.dataSource[indexPath.row];
+        cell.food = isEatMode ? self.ateFood[indexPath.row] : self.dataSource[indexPath.row];
     }else{
         cell.food = self.filterdDataSource[indexPath.row];
     }
-    
+    cell.food.nearFull = NO;
     [cell setBackgroundColor:cell.food.quantity == 0 ? [UIColor colorWithRed:234.f/255.f green:1.0f blue:243.f/255.f alpha:1.0f]:[UIColor colorWithRed:136.f/255.f green:253.f/255.f blue:202.f/255.f alpha:1.0f]];
+    if (_user.MBR - [self summaryCalories] < cell.food.energy) {
+        [cell setBackgroundColor:[UIColor colorWithRed:1 green:101.0/255.0 blue:103.0/255.0 alpha:1.0]];
+        cell.food.nearFull = YES;
+    }
+    cell.food.isFull = (_user.MBR - [self summaryCalories] ) <=  0 ;
     
     return cell;
 }
@@ -243,7 +255,8 @@ static NSString *kFEDDataFileName = @"FED.DAT";
     if (self.filterdDataSource.count) {
         [self.filterdDataSource removeAllObjects];
     }
-    for (FoodHelper *food in _dataSource) {
+    NSArray *target = isEatMode ? _ateFood : _dataSource;
+    for (FoodHelper *food in target) {
         NSRange nameRange = [food.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
         if(nameRange.location != NSNotFound )
         {
@@ -262,8 +275,7 @@ static NSString *kFEDDataFileName = @"FED.DAT";
     
     if (cell) {
         UITableView *tableView = self.searchDisplayController.isActive ? self.searchDisplayController.searchResultsTableView : self.tableView ;
-        NSIndexPath *indexPath = [tableView indexPathForCell:cell];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView reloadData];
     }
 }
 
@@ -301,6 +313,21 @@ static NSString *kFEDDataFileName = @"FED.DAT";
             [self save];
         }];
     }
+}
+- (IBAction)didToggle:(UIButton *)sender
+{
+    isEatMode = !isEatMode;
+    if (isEatMode) {
+        [self.ateFood removeAllObjects];
+        for (FoodHelper *food in self.dataSource) {
+            if (food.quantity > 0) {
+                [self.ateFood addObject:food];
+            }
+        }
+       
+    }
+    [sender setBackgroundImage:[UIImage imageNamed:isEatMode?@"FED_Dish":@"FED_Burger"] forState:UIControlStateNormal];
+    [self.tableView reloadData];
 }
 
 @end
