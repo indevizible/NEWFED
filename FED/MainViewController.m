@@ -13,6 +13,7 @@
 #import "FoodListCell.h"
 #import <StandardPaths/StandardPaths.h>
 #import "FoodeEditorViewController.h"
+#import <BlocksKit/BlocksKit+UIKit.h>
 
 @interface MainViewController () <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
 {
@@ -289,10 +290,27 @@ static NSString *kFEDDataFileName = @"FED.DAT";
 }
 - (IBAction)random:(id)sender
 {
-    NSUInteger rand = arc4random() %_dataSource.count ;
+    NSArray *mainData = isEatMode ? self.ateFood : self.dataSource;
+    NSMutableArray *avaliableData = [NSMutableArray new];
+    for (FoodHelper *food in mainData) {
+        if (food.energy <= (( _user.MBR - [self summaryCalories])))
+        {
+            [avaliableData addObject:food];
+        }
+    }
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rand inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    if ([avaliableData count]) {
+        NSUInteger rand = arc4random() % avaliableData.count ;
+        NSUInteger index = [mainData indexOfObject:avaliableData[rand]];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    }else{
+        UIAlertView *alertView =    [UIAlertView bk_alertViewWithTitle:@"Error" message:@"ไม่มีอาหารที่เหมาะสม"];
+        [alertView bk_addButtonWithTitle:@"ตกลง" handler:nil];
+        [alertView show];
+    }
+    
+    avaliableData = nil;
 }
 
 -(NSMutableArray *)filterdDataSource

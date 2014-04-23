@@ -55,6 +55,8 @@ static NSString *kCurrentEnergy = @"FED_ENGY_KEY";
         [alertView bk_addButtonWithTitle:@"ไม่กินละ" handler:^{
             _stepper.value -= 1;
             [self changedStepperValue:nil];
+            UITableView *tableView = (UITableView *)self.superview.superview;
+            [tableView reloadData];
         }];
         
         [alertView show];
